@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<!-- css -->
+	<!--<link rel="stylesheet" type="text/css" href=""/>-->
+	<style>
+		.h_elem {
+			float: left;
+		}
+		.h_elem_container {
+			overflow: hidden;
+		}
+		/* clear float layout */
+		.h_elem_container:after{
+			clear: both;
+		}
+		
+		select{
+			border:none;
+		}
+
+		.axis path, .axis line{
+			fill: none;
+			stroke: #000;
+		}
+	</style>
+	<!-- js -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js"></script>
+	<!--<script type="text/javascript" src="../jslib/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../jslib/d3.min.js"></script>-->
+	<script type="text/javascript" src="../js/LockRhythm.js"></script>
+</head>
+
+<body>
+	<div class="h_elem_container">
+		<label class="h_elem" for="lockRhythmInput0" class=>Type with rhythm: First</label>
+		<input class="h_elem" id="lockRhythmInput0" type="text"></input>
+		<button class="h_elem" id="showRhythmButton0">Show</button>
+		<button class="h_elem" id="clearRhythmButton0">Clear</button>
+	</div>
+	<div class="h_elem_container">
+		<label class="h_elem" for="lockRhythmInput1" class=>Type with rhythm: Second</label>
+		<input class="h_elem" id="lockRhythmInput1" type="text"></input>
+		<button class="h_elem" id="showRhythmButton1">Show</button>
+		<button class="h_elem" id="clearRhythmButton1">Clear</button>
+	</div>
+	<div class="h_elem_container">
+		<select id="rhythmListBox0" class="h_elem" size="20"></select>
+		<select id="rhythmListBox1" class="h_elem" size="20"></select>
+	</div>
+	<div class="h_elem_container">
+		<button id="convoluteButton" class="h_elem">Convolute Rhythm</button>
+		<span id="valueSpan"class="h_elem"></span>
+		<button id="validateButton" class="h_elem">Validate</button>
+		<span id="lockStatusSpan"class="h_elem"></span>
+	</div>
+	<div class="h_elem_container">
+		<div id="rhythmGraphDiv0" class="h_elem"></div>
+		<div id="rhythmGraphDiv1" class="h_elem"></div>
+	</div>
+	<div class="h_elem_container">
+		<div id="selfConvGraphDiv"></div>
+		<div id="convGraphDiv"></div>
+	</div>
+</body>
+
+</html>
