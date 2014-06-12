@@ -157,7 +157,8 @@
 			totalDiff += Math.abs(rhythmDate0 - rhythmDate1);
 		};
 		$("#valueSpan").html(totalDiff + "ms");
-		return totalDiff < 500;
+		var rhythmDuration = rhythmArr0[rhythmArr0.length - 1].date.getTime() - rhythmArr0[0].date.getTime();
+		return totalDiff < rhythmDuration / 5;
 	}
 	var validate = function(){
 		if(rhythmTotalDiff(inputData[0], inputData[1])){
